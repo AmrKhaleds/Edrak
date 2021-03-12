@@ -1,4 +1,87 @@
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
+/* Global */
 *{
     margin :0;
     padding :0;
 }
+body{
+    font-family: “Droid Arabic Kufi” , serif;
+    height: 4000px;  /* Remove When Project End */
+    direction: rtl; /* For Arbic lang */
+}
+button:focus {outline: none;}  /*Remove Border when it pressd*/
+/* Global */
+
+
+
+/* Start Navbar */
+
+#nav-bar {
+    position: sticky;
+    top :0;
+    z-index: 10;
+    /*min-height: 100%;    /*Not Important*/
+}
+.navbar { 
+    padding:0 !important;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.NavbarStyle{ 
+    background-color : #313A77 !important;
+    text-align: center;
+}
+.res-version{margin-left: 10px;}
+.NavbarStyle img{margin: 5px 22px 5px 10px;}
+@media (min-width: 992px){
+.NavbarStyle .nav-content{
+    position: absolute;
+    left :10px;
+    color :white ;
+    }
+}
+.NavbarStyle .nav-content .nav-links{
+    font-weight: bold;
+    font-size: 20px;
+}
+.NavbarStyle .nav-content .nav-links .link-name{padding:4px 12px 4px 12px;}
+.NavbarStyle .nav-content .nav-links .link-name a{
+    color:white !important;
+    transition: 0.3s ease-in-out;
+}
+.NavbarStyle .nav-content .nav-links .link-name a:hover,
+.NavbarStyle .nav-content .nav-links .link-name a:focus{
+    color:#F79C39 !important;
+    transform:scale(1.1);
+    transition: 0.3s ease-in-out;
+    transform: translateY(-5px);
+}
+.NavbarStyle .nav-content .nav-links .login-button{
+    padding:0 20px 0 20px;
+    background:none;
+    border: 2px solid white;
+    border-radius: 50px;
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    margin:10px;
+    transition: 0.3s ease-in-out;
+}
+.NavbarStyle .nav-content .nav-links .login-button:hover,
+.NavbarStyle .nav-content .nav-links .login-button:focus{
+    color:#F79C39 !important;
+    border: 2px solid #F79C39;
+    transform:scale(1.1);
+    transition: 0.3s ease-in-out;
+    transform: translateY(-5px);
+}
+
+/* .logo-img{  <!-- Reserve until the logo is placed -->
+    width :50px;
+    height: 50px;
+} */
+
+/* End Navbar */

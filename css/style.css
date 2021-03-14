@@ -151,7 +151,7 @@ header .nav-style .links-sec ul li a{
 
 .sec{
     background-color: #fff;
-    padding: 10px;
+    padding: 20px;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -168,16 +168,19 @@ header .nav-style .links-sec ul li a{
     margin: 50px auto 0 auto;
 
 }
+h1,
 h3 {
     font-size: 40px;
-    font-weight: 200;
-    margin: 10px;
+    font-weight: bold;
+    margin: 20px;
+    
 }
+
 p{
     position: relative;
-    font-size: 18px;
-    font-weight: 300;
-    margin-bottom: 20px;
+    font-size: 21px;
+    font-weight: 450;
+    margin-bottom: 25px;
     letter-spacing: 0.7px;
 }
 .btn{
@@ -187,6 +190,7 @@ p{
     background: #000;
     text-decoration: none;
     color:#fff;
+    margin: 20px;
 }
 .services{
     position: relative;

@@ -1,87 +1,374 @@
-@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
-
-/* Global */
+@import url('http://fonts.googleapis.com/earlyaccess/droidarabickufi.css');
+@import url('https://font.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900$display=swap');
 *{
-    margin :0;
     padding :0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: “Droid Arabic Kufi” , 'Poppins', sans-serif;
+
+}
+html {
+    scroll-behavior: smooth; /* Removed when scroll to top bottom is put */
 }
 body{
-    font-family: “Droid Arabic Kufi” , serif;
-    height: 4000px;  /* Remove When Project End */
-    direction: rtl; /* For Arbic lang */
+    min-height: 1000px;
+    direction: rtl ;
+    background-color: #000;
 }
-button:focus {outline: none;}  /*Remove Border when it pressd*/
-/* Global */
 
-
-
-/* Start Navbar */
-
-#nav-bar {
-    position: sticky;
-    top :0;
-    z-index: 10;
-    /*min-height: 100%;    /*Not Important*/
-}
-.navbar { 
+/* Header */
+header{
     padding:0 !important;
     overflow: hidden;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
+    z-index: 10;    
 }
-.NavbarStyle{ 
-    background-color : #313A77 !important;
+header .nav-style{
+    background: black;
+}
+header .nav-style .logo {
+    position: relative;
+    font-weight: 700;
+    color:#fff;
+    text-decoration: none;
+    font-size: 35px;
+    text-transform: uppercase;
+    transition: 0.6s ;
+    
+}
+header .nav-style .tg-btn{
+    outline: none;
+}
+.fa {
+    font-size: 40px;
+    color :white;
+    outline: none;
+}
+header .nav-style .links-sec ul li {
+    margin: 0 10px 0 10px;
+}
+header .nav-style .links-sec ul li a{
+    color :white;
+    text-decoration: none;
+    font-size :20px;
     text-align: center;
 }
-.res-version{margin-left: 10px;}
-.NavbarStyle img{margin: 5px 22px 5px 10px;}
-@media (min-width: 992px){
-.NavbarStyle .nav-content{
+
+/* End Header */
+
+
+/* Start Header */
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url('/images/banner.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.banner h2{
+    color :#fff;
+    font-size: 90px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1em;
+    
+} 
+.banner h2 span{
+    color :#4978ff;
+}
+
+
+.sec{
+    background-color: #fff;
+    padding: 10px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec .content {
+    margin-top :50px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.mxw800p{
+    max-width:  800px;
+    margin: 50px auto 0 auto;
+
+}
+h3 {
+    font-size: 40px;
+    font-weight: 200;
+    margin: 10px;
+}
+p{
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 0.7px;
+}
+.btn{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    background: #000;
+    text-decoration: none;
+    color:#fff;
+}
+.services{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap:30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.services .box{
+    width: 300px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+.services .box .iconBx {
+    margin-top: 25px;
+}
+.services .box .iconBx img{
+    max-width: 70px;
+    margin-bottom: 15px;
+}
+.services .box h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+} 
+.stats{
+    background: #000;
+    padding-top: 250px;
+    margin-top: -250px; 
+}
+.stats h3,
+.stats p{
+    color:#fff;
+}
+.statsBox {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px , 1fr));
+    grid-gap:20px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.statsBox h2{
+    color :#fff;
+    font-size: 36px;
+}
+.statsBox h4 {
+    color:#fff;
+    font-size:16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.workBx{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px , 1fr));
+    grid-gap:30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.workBx .brand{
+    position: relative;
+    background: #4978ff;
+    min-height: 300px;
+    width: 250px; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+
+}
+.workBx .brand:hover{
+    background: #000;
+    transition: 0.5s;
+}
+.workBx .brand a{
+    text-decoration: none;
+    color :rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+
+}
+.workBx .brand:hover a{
+    color :rgba(255,255,255,1);
+ 
+}
+.teamBx{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px , 1fr));
+    grid-gap:30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.teamBx .member{
+    position: relative;
+    background: #000;
+    min-height: 300px;
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.teamBx .member .imgBx{
     position: absolute;
-    left :10px;
-    color :white ;
-    }
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
-.NavbarStyle .nav-content .nav-links{
-    font-weight: bold;
+.teamBx .member .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.teamBx .member .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    transition: 0.2s;
+    opacity: 0;
+}
+.teamBx .member:hover .details{
+    opacity: 1;
+    transition: 0.2s;
+}
+.teamBx .member .details h2{
+    color: #fff;
+    text-transform: uppercase;
     font-size: 20px;
+    letter-spacing: 1px ;
 }
-.NavbarStyle .nav-content .nav-links .link-name{padding:4px 12px 4px 12px;}
-.NavbarStyle .nav-content .nav-links .link-name a{
-    color:white !important;
-    transition: 0.3s ease-in-out;
-}
-.NavbarStyle .nav-content .nav-links .link-name a:hover,
-.NavbarStyle .nav-content .nav-links .link-name a:focus{
-    color:#F79C39 !important;
-    transform:scale(1.1);
-    transition: 0.3s ease-in-out;
-    transform: translateY(-5px);
-}
-.NavbarStyle .nav-content .nav-links .login-button{
-    padding:0 20px 0 20px;
-    background:none;
-    border: 2px solid white;
-    border-radius: 50px;
-    color:white;
-    font-size: 20px;
-    font-weight: bold;
-    margin:10px;
-    transition: 0.3s ease-in-out;
-}
-.NavbarStyle .nav-content .nav-links .login-button:hover,
-.NavbarStyle .nav-content .nav-links .login-button:focus{
-    color:#F79C39 !important;
-    border: 2px solid #F79C39;
-    transform:scale(1.1);
-    transition: 0.3s ease-in-out;
-    transform: translateY(-5px);
-}
+.teamBx .member .details h2 span{
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
 
-/* .logo-img{  <!-- Reserve until the logo is placed -->
-    width :50px;
-    height: 50px;
-} */
+}
+.contact{
+    background: #000;
+    margin-top:50px;
+}
+.contact h3,
+.contact p{
+    color:#fff;
+    text-align: center;
+}
+.contactForm{
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
 
-/* End Navbar */
+}
+.contactForm form{
+    width: 100%;
+}
+.contactForm .row100{
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+.contactForm .row100 .inputBx50{
+    width: 50%;
+    margin: 0px 20px;
+}
+.contactForm .row100 .inputBx100 {
+    width: 100%;
+    margin: 0px 20px;
+    color:white ;
+}
+.contactForm .row100 input,
+.contactForm .row100 textarea{
+    position: relative;
+    border:none;
+    border-bottom: 1px solid  #fff;
+    color:#fff;
+    background: transparent;
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 20px 0;
+    resize: none;
+}
+.contactForm .row100 textarea{
+    height: 100px;
+}
+.contactForm .row100 input::placeholder,
+.contactForm .row100 textarea::placeholder{
+    color:rgba(255,255,255,0.5);
+}
+.contactForm .row100 input[type="submit"]{
+    background: #fff;
+    color: #000;
+    max-width: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 30px;
+}
+.sci{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+.sci ul{
+    display: flex;
+}
+.sci ul li{
+    list-style: none;
+}
+.sci ul li a{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 30px;
+}
+.sci ul li i{  
+    max-width: 40px;
+}
+.copyright{
+    color:#fff;
+
+}
+.copyright a{
+    text-decoration: none;
+    color:gold;
+}
